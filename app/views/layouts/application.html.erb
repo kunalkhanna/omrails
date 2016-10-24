@@ -18,9 +18,17 @@
           <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "About", about_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "Contact", "#", class: "nav-link" %></li>
+          <li class="nav-item pull-md-right"><%= link_to "Logout", signout_path, method: :delete, class: "nav-link btn btn-danger" %></li>
+          <li class="nav-item pull-md-right"><%= link_to "Sign in", signin_path, method: :get, class: "nav-link btn btn-success" %></li>
+          <li class="nav-item pull-md-right"><%= link_to "Sign up", signup_path, method: :get, class: "nav-link btn btn-primary" %></li>
         </ul>
       </div>
     </nav>
+
+    <!-- Flash Message -->
+    <% flash.each do |name, message| %>
+      <%= content_tag(:div, message, class: "alert alert-info #{name}") %>
+    <% end %>
 
     <!-- Page Content -->
     <%= yield %>
