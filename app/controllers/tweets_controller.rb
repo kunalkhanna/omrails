@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-
+  before_action :authenticate_user!
   # GET /tweets
   def index
     @tweets = Tweet.all
