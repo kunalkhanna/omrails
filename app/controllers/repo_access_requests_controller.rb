@@ -14,18 +14,18 @@ class RepoAccessRequestsController < ApplicationController
 
   # GET /repo_access_requests/new
   def new
-    @repo_access_request = RepoAccessRequest.new
+    @repo_access_request = current_user.repo_access_requests.new
   end
 
   # GET /repo_access_requests/1/edit
   def edit
-    @repo_access_request = RepoAccessRequest.find(params[:id])
+    @repo_access_request = current_user.repo_access_requests.find(params[:id])
   end
 
   # POST /repo_access_requests
   # POST /repo_access_requests.json
   def create
-    @repo_access_request = RepoAccessRequest.new(repo_access_request_params)
+    @repo_access_request = current_user.repo_access_requests.new(repo_access_request_params)
     respond_to do |format|
       if @repo_access_request.save
         format.html { redirect_to @repo_access_request, notice: 'Repo access request was successfully created.' }
@@ -40,7 +40,7 @@ class RepoAccessRequestsController < ApplicationController
   # PATCH/PUT /repo_access_requests/1
   # PATCH/PUT /repo_access_requests/1.json
   def update
-    @repo_access_request = RepoAccessRequest.find(params[:id])
+    @repo_access_request = current_user.repo_access_requests.find(params[:id])
     respond_to do |format|
       if @repo_access_request.update(repo_access_request_params)
         format.html { redirect_to @repo_access_request, notice: 'Repo access request was successfully updated.' }
@@ -55,7 +55,7 @@ class RepoAccessRequestsController < ApplicationController
   # DELETE /repo_access_requests/1
   # DELETE /repo_access_requests/1.json
   def destroy
-    @repo_access_request = RepoAccessRequest.find(params[:id])
+    @repo_access_request = current_user.repo_access_requests.find(params[:id])
     @repo_access_request.destroy
     respond_to do |format|
       format.html { redirect_to repo_access_requests_url, notice: 'Repo access request was successfully destroyed.' }

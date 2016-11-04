@@ -10,33 +10,43 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :user_id %>
+      <%= f.text_field :user_id, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :repository %>
-    <%= f.text_area :repository %>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :repository %>
+      <%= f.text_area :repository, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :repo_group %>
-    <%= f.text_area :repo_group %>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :repo_group %>
+      <%= f.text_area :repo_group, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :level %>
-    <%= f.text_field :level %>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :level %>
+      <%= f.text_field :level, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :request_action %>
-    <%= f.text_field :request_action %>
+  <div class="form-group">
+    <div class="field">
+      <%= f.label :request_action %>
+      <%= f.text_field :request_action, class: "form-control" %>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit %>
+  
+    <div class="actions">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
   </div>
 <% end %>

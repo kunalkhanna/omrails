@@ -1,29 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @repo_access_request.user %>
-</p>
+  <p>
+    <strong>User:</strong>
+    <%= @repo_access_request.user %>
+  </p>
 
-<p>
-  <strong>Repository:</strong>
-  <%= @repo_access_request.repository %>
-</p>
+  <p>
+    <strong>Repository:</strong>
+    <%= @repo_access_request.repository %>
+  </p>
 
-<p>
-  <strong>Repo group:</strong>
-  <%= @repo_access_request.repo_group %>
-</p>
+  <p>
+    <strong>Repo group:</strong>
+    <%= @repo_access_request.repo_group %>
+  </p>
 
-<p>
-  <strong>Level:</strong>
-  <%= @repo_access_request.level %>
-</p>
+  <p>
+    <strong>Level:</strong>
+    <%= @repo_access_request.level %>
+  </p>
 
-<p>
-  <strong>Request action:</strong>
-  <%= @repo_access_request.request_action %>
-</p>
+  <p>
+    <strong>Request action:</strong>
+    <%= @repo_access_request.request_action %>
+  </p>
 
-<%= link_to 'Edit', edit_repo_access_request_path(@repo_access_request) %> |
-<%= link_to 'Back', repo_access_requests_path %>
+  <%= link_to 'Edit', edit_repo_access_request_path(@repo_access_request) %> |
+  <%= link_to 'Back', repo_access_requests_path %>
+</div>
