@@ -1,0 +1,1 @@
+json.array! @repo_access_requests, partial: 'repo_access_requests/repo_access_request', as: :repo_access_request

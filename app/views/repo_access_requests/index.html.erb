@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Repo Access Requests</h1>
+
+  <table class=table>
+    <thead class="thead-inverse">
+      <tr>
+        <th>User</th>
+        <th>Repository</th>
+        <th>Repo group</th>
+        <th>Level</th>
+        <th>Request action</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @repo_access_requests.each do |repo_access_request| %>
+        <tr>
+          <td><%= repo_access_request.user %></td>
+          <td><%= repo_access_request.repository %></td>
+          <td><%= repo_access_request.repo_group %></td>
+          <td><%= repo_access_request.level %></td>
+          <td><%= repo_access_request.request_action %></td>
+          <td><%= link_to 'Show', repo_access_request %></td>
+          <% if repo_access_request.user == current_user %>
+            <td><%= link_to 'Edit', edit_repo_access_request_path(repo_access_request) %></td>
+            <td><%= link_to 'Destroy', repo_access_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Repo Access Request', new_repo_access_request_path %>
+</div>

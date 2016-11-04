@@ -1,0 +1,1 @@
+json.partial! "repo_access_requests/repo_access_request", repo_access_request: @repo_access_request

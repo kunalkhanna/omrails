@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  repository: MyText
+  repo_group: MyText
+  level: MyString
+  request_action: MyString
+
+two:
+  user: two
+  repository: MyText
+  repo_group: MyText
+  level: MyString
+  request_action: MyString

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :repo_access_requests
   ActiveAdmin.routes(self)
   resources :tweets
   devise_for :users
