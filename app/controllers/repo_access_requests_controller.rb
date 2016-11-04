@@ -1,5 +1,5 @@
 class RepoAccessRequestsController < ApplicationController
-
+  before_action :authenticate_user!
   # GET /repo_access_requests
   # GET /repo_access_requests.json
   def index

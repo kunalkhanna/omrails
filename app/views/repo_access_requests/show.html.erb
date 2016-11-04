@@ -25,7 +25,8 @@
     <strong>Request action:</strong>
     <%= @repo_access_request.request_action %>
   </p>
-
-  <%= link_to 'Edit', edit_repo_access_request_path(@repo_access_request) %> |
+  <% if @repo_access_request.user == current_user %>
+    <%= link_to 'Edit', edit_repo_access_request_path(@repo_access_request) %> |
+  <% end %>
   <%= link_to 'Back', repo_access_requests_path %>
 </div>
