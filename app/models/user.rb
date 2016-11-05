@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :rememberable, :trackable, :validatable
   has_many :tweets
   has_many :repo_access_requests
+
+  validates :username, presence:true, uniqueness:true, length: {minimum: 6}
+  validates :name, presence:true
 end
